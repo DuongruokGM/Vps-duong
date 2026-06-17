@@ -1,0 +1,25 @@
+name: VPS Mini
+
+on:
+  workflow_dispatch:
+
+jobs:
+  vps:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: System Info
+        run: |
+          echo "=== VPS MINI ==="
+          uname -a
+          free -h
+          df -h
+
+      - name: Keep Alive
+        run: |
+          echo "Running..."
+          for i in {1..360}
+          do
+            echo "Minute $i"
+            sleep 60
+          done
