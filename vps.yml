@@ -1,0 +1,18 @@
+name: VPS Mini
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Start
+        run: |
+          echo "VPS Started"
+          while true
+          do
+            date
+            sleep 60
+          done
